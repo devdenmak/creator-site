@@ -1,4 +1,4 @@
-import { COMPANY_NAME, DEFAULT_DESCRIPTION } from '@/app/_shared/config'
+import { COMPANY_NAME, DEFAULT_DESCRIPTION, THEME_COLOR } from '@/app/_shared/config'
 import icon192 from '@/app/icon-192.png'
 import icon512 from '@/app/icon-512.png'
 import iconMaskable from '@/app/maskable-icon.png'
@@ -44,8 +44,8 @@ export default function manifest() {
         form_factor: 'wide',
       },
     ],
-    theme_color: '#120932',
-    background_color: '#120932',
+    theme_color: THEME_COLOR,
+    background_color: THEME_COLOR,
     scope: '/',
   }
 }

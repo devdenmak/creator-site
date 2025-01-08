@@ -3,19 +3,55 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+  /* Backgrounds */
+  
+  --background-primary: #120932;
+  --background-secondary: #16FFFF;
+  --background-third: #C2FF16;
+
+  
+  /* Foregrounds */
+
+  --foreground-primary: #DEE7F1;
+  --foreground-secondary: #0F3D46;
+  --foreground-third: #16FFFF;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  
+  html {
+    @apply min-h-full min-w-[375px] font-main;
+
+    text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(15, 61, 70, 0.15);
+  } 
+
+  body {
+    @apply relative flex min-h-full flex-col break-words bg-background-primary text-base text-foreground-primary selection:bg-background-third selection:text-black;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='password']::-ms-reveal,
+  input[type='password']::-ms-clear {
+    visibility: hidden;
+    pointer-events: none;
+    display: none;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

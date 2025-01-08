@@ -7,7 +7,11 @@ import {
   DEFAULT_TITLE,
   FRONTEND_URL,
   SITE_NAME,
+  THEME_COLOR,
 } from '@/app/_shared/config'
+
+import { Header } from '@/app/_widgets/header'
+import { Footer } from '@/app/_widgets/footer'
 
 import './_shared/css/globals.css'
 
@@ -34,7 +38,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#120932',
+  themeColor: THEME_COLOR,
   viewportFit: 'cover',
   width: 'device-width',
   initialScale: 1,
@@ -47,8 +51,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ProximaNova.variable} ${ChakraPetch.variable}`}>
-        <main>{children}</main>
+      <body
+        className={`${ProximaNova.variable} ${ChakraPetch.variable} min-h-screen flex flex-col`}
+      >
+        <Header />
+
+        <main className="flex-grow">{children}</main>
+
+        <Footer />
       </body>
     </html>
   )

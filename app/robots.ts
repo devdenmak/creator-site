@@ -5,7 +5,8 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: '*',
-      // disallow: ['*.pdf', '/*?', '/storybook', '/sprite'],
+      // TODO: Uncomment for production
+      // disallow: ['*.pdf', '/*?'],
       disallow: '/',
     },
     sitemap: `${FRONTEND_URL}/sitemap.xml`,
