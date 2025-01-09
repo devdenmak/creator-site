@@ -32,7 +32,9 @@ const Button = forwardRef<HTMLButtonElement, IButtonProps>(
             {
               'group-[.text-background-sixth]:text-white group-hover:!text-black group-active:!text-white':
                 variant === 'secondary',
-              'group-hover:!text-white group-active:!text-black': variant === 'third',
+              'group-hover:!text-white group-active:!text-black':
+                variant === 'third' || variant === 'fourth',
+              'group-[.text-background-nineth]:text-foreground-eight': variant === 'sixth',
             },
           )}
         >

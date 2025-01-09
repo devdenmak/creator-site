@@ -23,14 +23,19 @@ export const ProximaNova = localFont({
       style: 'normal',
     },
     {
+      path: '../../_shared/fonts/ProximaNova/ProximaNova-BoldIt.woff2',
+      weight: '700',
+      style: 'italic',
+    },
+    {
       path: '../../_shared/fonts/ProximaNova/ProximaNova-Extrabld.woff2',
       weight: '800',
       style: 'normal',
     },
     {
-      path: '../../_shared/fonts/ProximaNova/ProximaNova-BoldIt.woff2',
-      weight: '700',
-      style: 'italic',
+      path: '../../_shared/fonts/ProximaNova/ProximaNova-Black.woff2',
+      weight: '900',
+      style: 'normal',
     },
   ],
 })

@@ -9,6 +9,9 @@ export const variants = {
   secondary: 'group text-background-sixth hover:text-background-third active:text-background-sixth',
   third:
     'group text-background-secondary hover:text-background-sixth active:text-background-secondary',
+  fourth: 'group text-background-third hover:text-background-sixth active:text-background-third',
+  fifth: 'group text-background-third hover:text-background-secondary active:text-background-third',
+  sixth: 'group text-background-nineth hover:opacity-90 active:opacity-100',
 }
 
 export const buttonVariants = cva(

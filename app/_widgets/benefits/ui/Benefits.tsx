@@ -48,9 +48,9 @@ const Benefits = () => {
             </section>
           ))}
         </div>
-
-        <GetStarted backgroundImage={getBackgroundImage(srcSet)} />
       </div>
+
+      <GetStarted backgroundImage={getBackgroundImage(srcSet)} />
     </section>
   )
 }

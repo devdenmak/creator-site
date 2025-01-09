@@ -7,7 +7,13 @@ import { Title } from '@/app/_shared/ui/Title'
 import { Text } from '@/app/_shared/ui/Text'
 import { Benefits } from '@/app/_widgets/benefits'
 import { Features } from '@/app/_widgets/features'
-import { Pricing } from '@/app/_widgets/pricing/ui'
+import { Pricing } from '@/app/_widgets/pricing'
+import { Clients } from '@/app/_widgets/clients'
+import { Review } from '@/app/_widgets/review'
+import { GetStarted, GetStartedSecondBg, GetStartedThirdBg } from '@/app/_widgets/get-started'
+import { Faq } from '@/app/_widgets/faq'
+import { Onboarding } from '@/app/_widgets/onboarding'
+import { Subscribe } from '@/app/_widgets/subscribe'
 
 export const metadata: Metadata = {
   title: `Home Page | ${DEFAULT_TITLE}`,
@@ -22,6 +28,14 @@ export default function Home() {
   const {
     props: { srcSet: previewSeconsBgSrc },
   } = getImageProps({ alt: '', width: 1728, height: 942, src: BgPreviewSecond, quality: 100 })
+
+  const {
+    props: { srcSet: getStartedFirstBgSrc },
+  } = getImageProps({ alt: '', width: 1328, height: 251, src: GetStartedSecondBg })
+
+  const {
+    props: { srcSet: getStartedSecondBgSrc },
+  } = getImageProps({ alt: '', width: 1328, height: 251, src: GetStartedThirdBg })
 
   return (
     <>
@@ -52,6 +66,25 @@ export default function Home() {
           </span>
         </Text>
       </Preview>
+
+      <Clients />
+      <Review />
+
+      <GetStarted
+        className="my-24"
+        variant="secondary"
+        backgroundImage={getBackgroundImage(getStartedFirstBgSrc)}
+      />
+
+      <Faq />
+      <Onboarding />
+      <Subscribe />
+
+      <GetStarted
+        className="my-24"
+        variant="third"
+        backgroundImage={getBackgroundImage(getStartedSecondBgSrc)}
+      />
     </>
   )
 }

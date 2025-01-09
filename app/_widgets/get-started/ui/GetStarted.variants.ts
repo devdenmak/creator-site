@@ -2,7 +2,8 @@ import { cva, VariantProps } from 'class-variance-authority'
 
 export const variants = {
   default: 'text-white',
-  secondary: '',
+  secondary: 'bg-background-secondary text-foreground-tenth',
+  third: 'bg-background-fifth text-white',
 }
 
 export const getStartedVariants = cva(

@@ -13,6 +13,8 @@
   --background-fifth: #0F3D46;
   --background-sixth: #202D3A; 
   --background-seventh: #E2E8EF;
+  --background-eight: #2B1C5F;
+  --background-nineth: #415C0F;
 
   
   /* Foregrounds */
@@ -26,6 +28,9 @@
   --foreground-seventh: #8C9CAE;
   --foreground-eight: #C2FF16;
   --foreground-nineth: #557F88;
+  --foreground-tenth: #120932; 
+  --foreground-eleventh: #938BAD;
+  --foreground-twelfth: #415C0F;
 }
 
 @layer base {
