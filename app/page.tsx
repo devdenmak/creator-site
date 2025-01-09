@@ -14,6 +14,7 @@ import { GetStarted, GetStartedSecondBg, GetStartedThirdBg } from '@/app/_widget
 import { Faq } from '@/app/_widgets/faq'
 import { Onboarding } from '@/app/_widgets/onboarding'
 import { Subscribe } from '@/app/_widgets/subscribe'
+import { Intro } from '@/app/_widgets/intro'
 
 export const metadata: Metadata = {
   title: `Home Page | ${DEFAULT_TITLE}`,
@@ -39,6 +40,7 @@ export default function Home() {
 
   return (
     <>
+      <Intro />
       <Preview backgroundImage={getBackgroundImage(previewFirstBgSrc)}>
         <Title className="max-w-[520px]">Public, sharable agency link with verified data</Title>
 

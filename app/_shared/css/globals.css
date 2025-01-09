@@ -100,3 +100,6 @@
   background-size: contain, cover;
 }
 
+.apollo-hotfix {
+  fill: #401079 !important;
+}
