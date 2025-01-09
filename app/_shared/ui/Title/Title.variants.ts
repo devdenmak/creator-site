@@ -1,16 +1,14 @@
 import { cva, VariantProps } from 'class-variance-authority'
 
 export const sizes = {
-  default: 'text-sm',
+  default: 'text-3.5xl max-md:text-2.5xl max-md:tracking-[0.84px]',
 }
 
 export const colors = {
   default: 'text-inherit',
-  main: 'group text-foreground-fifth',
-  secondary: 'group text-foreground-sixth',
 }
 
-export const textVariants = cva('font-main font-bold', {
+export const titleVariants = cva('font-headings tracking-[0.96px] font-bold uppercase', {
   variants: {
     size: sizes,
     variant: colors,
@@ -21,4 +19,4 @@ export const textVariants = cva('font-main font-bold', {
   },
 })
 
-export type textVariants = VariantProps<typeof textVariants>
+export type titleVariants = VariantProps<typeof titleVariants>

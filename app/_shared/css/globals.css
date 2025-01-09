@@ -9,26 +9,36 @@
   --background-primary: #120932;
   --background-secondary: #16FFFF;
   --background-third: #C2FF16;
+  --background-fourth: #211352;
+  --background-fifth: #0F3D46;
+  --background-sixth: #202D3A; 
+  --background-seventh: #E2E8EF;
 
   
   /* Foregrounds */
-
+ 
   --foreground-primary: #DEE7F1;
   --foreground-secondary: #0F3D46;
   --foreground-third: #16FFFF;
+  --foreground-fourth: #B4C1D0;
+  --foreground-fifth: #B0A7CF;
+  --foreground-sixth: #697889;
+  --foreground-seventh: #8C9CAE;
+  --foreground-eight: #C2FF16;
+  --foreground-nineth: #557F88;
 }
 
 @layer base {
   
   html {
-    @apply min-h-full min-w-[375px] font-main;
+    @apply min-h-full min-w-[375px];
 
     text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(15, 61, 70, 0.15);
   } 
 
   body {
-    @apply relative flex min-h-full flex-col break-words bg-background-primary text-base text-foreground-primary selection:bg-background-third selection:text-black;
+    @apply relative flex min-h-full flex-col break-words bg-background-primary font-main text-base text-foreground-primary selection:bg-background-third selection:text-black;
   }
 
   input[type='number']::-webkit-inner-spin-button,
@@ -43,6 +53,12 @@
     pointer-events: none;
     display: none;
   }
+
+  @media (max-width: 768px) {
+    .container {
+      max-width: 100% !important;
+    }
+  }
 }
 
 @layer utilities {
@@ -55,3 +71,27 @@
     scrollbar-width: none;
   }
 }
+
+@layer components {
+  .icon {
+    @apply select-none fill-current inline-block text-inherit box-content;
+  }
+
+  .icon[data-axis*='x'] {
+    @apply w-[1.375em];
+  }
+
+  .icon[data-axis*='y'] {
+    @apply h-[1.375em];
+  }
+
+  .text-0 {
+    font-size: 0;
+    line-height: 0;
+  }
+}
+
+.custom-background {
+  background-size: contain, cover;
+}
+

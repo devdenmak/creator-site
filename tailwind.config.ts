@@ -8,6 +8,26 @@ export default {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '1.5xl': [
+          '1.375rem',
+          {
+            lineHeight: '1.625rem',
+          },
+        ],
+        '2.5xl': [
+          '1.75rem',
+          {
+            lineHeight: '2rem',
+          },
+        ],
+        '3.5xl': [
+          '2rem',
+          {
+            lineHeight: '2.25rem',
+          },
+        ],
+      },
       screens: {
         sm: '425px',
         md: '768px',
@@ -35,10 +55,20 @@ export default {
         'background-primary': 'var(--background-primary)',
         'background-secondary': 'var(--background-secondary)',
         'background-third': 'var(--background-third)',
+        'background-fourth': 'var(--background-fourth)',
+        'background-fifth': 'var(--background-fifth)',
+        'background-sixth': 'var(--background-sixth)',
+        'background-seventh': 'var(--background-seventh)',
 
         'foreground-primary': 'var(--foreground-primary)',
         'foreground-secondary': 'var(--foreground-secondary)',
         'foreground-third': 'var(--foreground-third)',
+        'foreground-fourth': 'var(--foreground-fourth)',
+        'foreground-fifth': 'var(--foreground-fifth)',
+        'foreground-sixth': 'var(--foreground-sixth)',
+        'foreground-seventh': 'var(--foreground-seventh)',
+        'foreground-eight': 'var(--foreground-eight)',
+        'foreground-nineth': 'var(--foreground-nineth)',
       },
 
       keyframes: {
@@ -58,5 +88,17 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({
+      addUtilities,
+    }: {
+      addUtilities: (utilities: Record<string, Record<string, string>>) => void
+    }) {
+      addUtilities({
+        '.scale-flip': {
+          transform: 'scale(-1, -1)',
+        },
+      })
+    },
+  ],
 } satisfies Config

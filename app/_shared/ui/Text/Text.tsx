@@ -1,18 +1,18 @@
 import { HTMLAttributes } from 'react'
 
 import { cn } from '../../lib/tailwindUtils'
-import { titleVariants } from './Text.variants'
+import { textVariants } from './Text.variants'
 
 export type ITextTags = 'p'
 
-interface ITitleProps extends HTMLAttributes<HTMLHeadingElement>, titleVariants {
+interface ITextProps extends HTMLAttributes<HTMLElement>, textVariants {
   tag?: ITextTags
 }
 
-const Title = ({ className, tag = 'p', size, variant, children }: ITitleProps) => {
+const Title = ({ className, tag = 'p', size, variant, children }: ITextProps) => {
   const Comp = tag
 
-  return <Comp className={cn(titleVariants({ size, variant, className }))}>{children}</Comp>
+  return <Comp className={cn(textVariants({ size, variant, className }))}>{children}</Comp>
 }
 
 export default Title

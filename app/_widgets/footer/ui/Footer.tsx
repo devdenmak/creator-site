@@ -12,9 +12,9 @@ import {
 import Link from 'next/link'
 import { Text } from '@/app/_shared/ui/Text'
 
-const Footer = () => {
-  const year = new Date().getFullYear().toString()
+const currentYear = new Date().getFullYear().toString()
 
+const Footer = () => {
   return (
     <footer className="bg-background-third text-foreground-secondary pt-14 pb-20 max-lg:pb-18 max-md:pt-10 max-md:pb-10">
       <div className="container">
@@ -32,7 +32,7 @@ const Footer = () => {
               {NAVIGATION.map(({ name, href }) => (
                 <li key={name}>
                   <Link
-                    className="-m-2 p-2 tracking-[0.96px] transition-colors text-xs font-headings font-semibold text-inherit hover:text-black active:text-inherit uppercase"
+                    className="-m-2 p-2 tracking-[0.96px] transition-colors text-xs font-headings font-semibold text-inherit hover:text-black active:text-inherit uppercase inline-block"
                     href={href}
                   >
                     <span>{name}</span>
@@ -52,7 +52,7 @@ const Footer = () => {
           {SOCIALS.map(({ name, href }) => (
             <li key={name}>
               <Link
-                className="-m-2 p-2 text-base font-bold text-inherit transition-colors hover:text-black active:text-inherit"
+                className="-m-2 p-2 text-base font-bold text-inherit transition-colors hover:text-black active:text-inherit inline-block"
                 href={href}
               >
                 <span>{name}</span>
@@ -63,14 +63,14 @@ const Footer = () => {
 
         <div className="flex flex-wrap items-end gap-x-8 gap-y-7 justify-between border-t border-foreground-secondary pt-4 mt-32 max-lg:items-start max-md:mt-12">
           <p className="text-sm font-semibold max-lg:max-w-[300px]">
-            © <time dateTime={year}>{year}</time> - CreatorNimbus™ All rights reserved. Platform
-            developed by{' '}
+            © <time dateTime={currentYear}>{currentYear}</time> - CreatorNimbus™ All rights
+            reserved. Platform developed by{' '}
             <a
               target="_blank"
               href={RAGEBITE_LINK}
-              className="transition-colors hover:text-black active:text-inherit font-extrabold p-1 -m-1"
+              className="transition-colors hover:text-black active:text-inherit font-extrabold p-1 -m-1 uppercase inline-block"
             >
-              RAGEBITE
+              Ragebite
             </a>
           </p>
 
@@ -78,7 +78,7 @@ const Footer = () => {
             {CONVERSATIONS.map(({ name, href }) => (
               <li key={name}>
                 <Link
-                  className="-m-2 p-2 text-sm font-semibold transition-colors text-inherit hover:text-black active:text-inherit"
+                  className="-m-2 p-2 text-sm font-semibold transition-colors text-inherit hover:text-black active:text-inherit inline-block"
                   href={href}
                 >
                   <span>{name}</span>

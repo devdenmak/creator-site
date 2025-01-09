@@ -19,6 +19,7 @@
 
 # production
 /build
+/public/sprites
 
 # misc
 .DS_Store
