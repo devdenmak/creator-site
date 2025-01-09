@@ -10,7 +10,7 @@ import {
   THEME_COLOR,
 } from '@/app/_shared/config'
 
-// import { Header } from '@/app/_widgets/header'
+import { Header } from '@/app/_widgets/header'
 import { Footer } from '@/app/_widgets/footer'
 
 import './_shared/css/globals.css'
@@ -54,7 +54,7 @@ export default function RootLayout({
       <body
         className={`${ProximaNova.variable} ${ChakraPetch.variable} min-h-screen flex flex-col`}
       >
-        {/* <Header /> */}
+        <Header />
 
         <main className="flex-grow">{children}</main>
 
