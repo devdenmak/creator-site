@@ -11,7 +11,7 @@ const Intro = () => {
       style={{ backgroundImage: getBackgroundImage(IntroBg, 1728, 890, 100) }}
       className="bg-cover bg-center bg-no-repeat bg-background-tenth text-white overflow-hidden"
     >
-      <div className="container min-h-dvh flex flex-col items-center justify-center text-center py-36 max-lg:text-left max-lg:items-start max-md:pb-20">
+      <div className="animate-fade animate-delay-300 container min-h-dvh flex flex-col items-center justify-center text-center py-36 max-lg:text-left max-lg:items-start max-md:pb-20">
         <div className="max-w-5xl">
           <Title size="l" tag="h1" className="mb-4">
             Transform the Way Your Influencer Management Agency Operates
