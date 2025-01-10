@@ -3,7 +3,7 @@ import localFont from 'next/font/local'
 
 export const ChakraPetch = Chakra_Petch({
   variable: '--font-chakra-petch',
-  weight: ['600', '700'],
+  weight: ['500', '600', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   // display: 'block',

@@ -3,7 +3,7 @@
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, forwardRef, ReactNode, Ref } from 'react'
 
 import { buttonVariants } from './Button.variants'
-import { ButtonCorner } from './ButtonCorner'
+import { Corner, ICornerTypes } from '../Corner'
 import Link from 'next/link'
 import { cn } from '@/app/_shared/lib/tailwindUtils'
 
@@ -14,10 +14,12 @@ export interface IButtonProps extends buttonVariants {
   href?: string
   loading?: boolean
   disabled?: boolean
-  type?: 'submit' | 'button' | 'reset'
+  type?: 'submit' | 'button'
   className?: string
   children?: ReactNode
   target?: '_blank' | '_self'
+  cornerLeftType?: ICornerTypes
+  cornerRightType?: ICornerTypes
 }
 
 const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, IButtonProps>(
@@ -32,17 +34,31 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, IButtonProps>(
       loading,
       disabled,
       type = 'button',
+      cornerLeftType = 'rounded',
+      cornerRightType = 'rounded',
       ...props
     },
     ref,
   ) => {
     const innerEl = (
       <>
-        <ButtonCorner className="left-0 -ml-5" />
+        <Corner
+          type={cornerLeftType}
+          className={cn('left-0 ', {
+            '-ml-6': cornerLeftType === 'strict',
+            '-ml-5': cornerLeftType === 'rounded',
+          })}
+        />
         <span className="font-headings truncate uppercase text-xs font-bold text-black tracking-[0.96px] transition-colors">
           {children}
         </span>
-        <ButtonCorner className="right-0 -mr-5 scale-x-[-1] scale-y-[-1]" />
+        <Corner
+          type={cornerRightType}
+          className={cn('right-0 scale-x-[-1] scale-y-[-1]', {
+            '-mr-6': cornerRightType === 'strict',
+            '-mr-5': cornerRightType === 'rounded',
+          })}
+        />
       </>
     )
 

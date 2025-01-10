@@ -13,7 +13,6 @@ export interface SpritesMap {
     | 'toggler'
     | 'user'
     | 'zipper'
-  logos: 'amg' | 'apollo' | 'disput' | 'kaizen' | 'newgen' | 'nogooo'
   outlined: 'check' | 'info'
 }
 export const SPRITES_META: {
@@ -96,41 +95,6 @@ export const SPRITES_META: {
         viewBox: '0 0 15 20',
         width: 15,
         height: 20,
-      },
-    },
-  },
-  logos: {
-    filePath: 'logos.aed875b5.svg',
-    items: {
-      amg: {
-        viewBox: '0 0 75 23',
-        width: 75,
-        height: 23,
-      },
-      apollo: {
-        viewBox: '0 0 83 18',
-        width: 83,
-        height: 18,
-      },
-      disput: {
-        viewBox: '0 0 60 18',
-        width: 60,
-        height: 18,
-      },
-      kaizen: {
-        viewBox: '0 0 88 14',
-        width: 88,
-        height: 14,
-      },
-      newgen: {
-        viewBox: '0 0 81 16',
-        width: 81,
-        height: 16,
-      },
-      nogooo: {
-        viewBox: '0 0 77 13',
-        width: 77,
-        height: 13,
       },
     },
   },
