@@ -28,7 +28,7 @@ export const PricingCard = ({
 }: IPricingCardProps) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.7,
+    threshold: 0.6,
   })
 
   const [switchState, setSwitchState] = useState(1)
@@ -51,7 +51,7 @@ export const PricingCard = ({
         {
           'bg-background-secondary': theme === 'main',
           'bg-background-third': theme === 'secondary',
-          'animate-fade-up': inView,
+          'animate-fade-up animate-duration-500': inView,
           'animate-delay-300': theme === 'secondary',
         },
       )}

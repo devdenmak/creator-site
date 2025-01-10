@@ -1,7 +1,10 @@
+'use client'
+
 import { HTMLAttributes } from 'react'
 
 import { cn } from '../../lib/tailwindUtils'
 import { taglineVariants } from './Tagline.variants'
+import { useInView } from 'react-intersection-observer'
 
 export type ITaglineTags = 'p'
 
@@ -10,10 +13,20 @@ interface ITaglineProps extends HTMLAttributes<HTMLElement>, taglineVariants {
 }
 
 const Tagline = ({ className, tag = 'p', variant, children }: ITaglineProps) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 1,
+  })
+
   const Comp = tag
 
   return (
-    <Comp className={cn(taglineVariants({ variant, className }))}>
+    <Comp
+      ref={ref}
+      className={cn(taglineVariants({ variant, className }), 'opacity-0 transition-all', {
+        'animate-fade-right animate-duration-500': inView,
+      })}
+    >
       <svg
         className="fill-current flex-none mr-2.5 mt-1.5 group-[.text-foreground-fourth]:fill-background-third"
         xmlns="http://www.w3.org/2000/svg"
