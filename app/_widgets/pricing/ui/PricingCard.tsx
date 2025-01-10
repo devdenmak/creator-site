@@ -9,6 +9,7 @@ import { formatPercentage, formatPrice } from '@/app/_shared/lib/formatPrice'
 import { cn } from '@/app/_shared/lib/tailwindUtils'
 import { Icon } from '@/app/_shared/ui/Icon'
 import { GETTING_STARTED_LINK } from '@/app/_shared/config'
+import { useInView } from 'react-intersection-observer'
 
 type IPricingCardProps = {
   theme?: 'main' | 'secondary'
@@ -25,6 +26,11 @@ export const PricingCard = ({
   prices,
   features,
 }: IPricingCardProps) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.7,
+  })
+
   const [switchState, setSwitchState] = useState(1)
 
   const priceMoreOne = prices.length > 1
@@ -39,11 +45,14 @@ export const PricingCard = ({
 
   return (
     <section
+      ref={ref}
       className={cn(
-        'min-h-[640px] text-black rounded-2xl p-7 font-main flex flex-col min-w-0 max-lg:min-h-0 max-lg:p-5',
+        'min-h-[640px] text-black rounded-2xl p-7 font-main flex flex-col min-w-0 max-lg:min-h-0 max-lg:p-5 opacity-0 transition-all',
         {
           'bg-background-secondary': theme === 'main',
           'bg-background-third': theme === 'secondary',
+          'animate-fade-up': inView,
+          'animate-delay-300': theme === 'secondary',
         },
       )}
     >
@@ -56,9 +65,9 @@ export const PricingCard = ({
         </div>
       </div>
 
-      <div className="pricing-card__control-box flex items-center flex-wrap gap-x-[10px] gap-y-[8px] border-b border-b-foreground-sixteenth pb-5">
+      <div className="flex items-center flex-wrap gap-x-[10px] gap-y-[8px] border-b border-b-foreground-sixteenth pb-5">
         {priceMoreOne && (
-          <div className="pricing-card__switch text-[0] leading-[0] flex-none">
+          <div className="text-[0] leading-[0] flex-none">
             <Switch
               checked={!!switchState}
               onCheckedChange={(val) => setSwitchState(val ? 1 : 0)}
@@ -67,9 +76,7 @@ export const PricingCard = ({
           </div>
         )}
 
-        <p className="pricing-card__description mt-[3px] mb-0 text-base font-semibold leading-[1.27]">
-          {description}
-        </p>
+        <p className="mt-[3px] mb-0 text-base font-semibold leading-[1.27]">{description}</p>
       </div>
 
       <ul className="py-10">
