@@ -6,7 +6,7 @@ import { Button } from '@/app/_shared/ui/Button'
 
 const Header = () => {
   return (
-    <header className="absolute left-0 top-0 right-0">
+    <header className="absolute left-0 top-0 right-0 z-10">
       <div className="container h-24 flex gap-x-8 items-center justify-between md:max-w-full md:px-9">
         <Link href={LOGO_LINK} className="-mx-2 inline-flex p-2 flex-none max-sm:w-40">
           <Image priority src={Logo} className="Logo" alt={`Logo ${COMPANY_NAME}`} />
