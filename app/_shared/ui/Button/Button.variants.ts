@@ -13,7 +13,8 @@ export const variants = {
     'text-background-secondary hover:text-background-sixth active:text-background-secondary [&>span]:hover:text-white [&>span]:active:text-black',
   fourth:
     'text-background-third hover:text-background-sixth active:text-background-third [&>span]:hover:text-white [&>span]:active:text-black',
-  fifth: 'text-background-nineth hover:opacity-90 active:opacity-100',
+  fifth:
+    'text-background-nineth hover:opacity-90 active:opacity-100 [&>span]:text-foreground-eight',
 }
 
 export const buttonVariants = cva(

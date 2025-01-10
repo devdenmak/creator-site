@@ -1,46 +1,53 @@
 import { Tagline } from '@/app/_shared/ui/Tagline'
 import { Title } from '@/app/_shared/ui/Title'
+import { Text } from '@/app/_shared/ui/Text'
 import { BENEFITS } from '../config'
 import { Icon } from '@/app/_shared/ui/Icon'
+import { ContactForm } from '@/app/_widgets/contact-form'
 
 const Subscribe = () => {
   return (
-    <section className="pt-[120px] pb-[20px]">
+    <section className="pt-28 pb-5 max-lg:pt-16 max-md:pt-8">
       <div className="container">
         <Tagline className="mb-[30px]" variant="main">
           The future is bright
         </Tagline>
 
-        <div className="grid grid-cols-2 gap-[20px] max-xl:grid-cols-1">
+        <div className="grid grid-cols-2 gap-x-5 gap-y-20 max-xl:grid-cols-1 max-md:gap-y-12">
           <div>
             <Title className="max-w-[516px] mb-4">
               Nimbus is in early stages subscribe for future updates
             </Title>
 
-            <p className="text-foreground-sixth text-sm font-bold max-w-[429px]">
+            <Text variant="secondary" className="max-w-[429px] mb-8">
               CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer
               management,{' '}
-              <span className="text-[#8C9CAE]">
+              <span className="text-foreground-seventh">
                 giving you more time to focus on growing your business.
               </span>
-            </p>
+            </Text>
+
+            <ContactForm className="max-w-[420px]" />
           </div>
 
           <div>
-            <div className="grid gap-5 grid-cols-2 max-lg:grid-cols-1 max-lg:gap-4 max-lg:mb-4 max-md:gap-0 max-md:mb-0 items-start text-black">
+            <div className="grid gap-5 grid-cols-2 max-md:grid-cols-1 max-lg:gap-4 max-lg:mb-4 items-start text-black max-md:gap-3">
               {BENEFITS.map(({ title, description, icon }) => (
                 <section
-                  className="first:mt-24 last:-mt-24 max-xl:first:mt-0 max-xl:last:mt-0 group bg-[#2A1C5F] p-8 rounded-2xl max-lg:min-h-0 hover:bg-background-secondary transition-colors cursor-default max-md:rounded-none"
+                  className="first:mt-24 last:-mt-24 max-xl:first:mt-0 max-xl:last:mt-0 group bg-background-eight p-8 rounded-2xl max-lg:min-h-0 hover:bg-background-secondary transition-colors cursor-default max-md:p-6"
                   key={title}
                 >
-                  <div className="flex flex-nowrap text-foreground-eight items-center mb-4 group-hover:text-inherit transition-colors">
-                    <Icon className="flex-none" name={icon} />
+                  <div className="max-md:flex">
+                    <div className="flex flex-nowrap text-foreground-eight items-center mb-4 group-hover:text-inherit transition-colors max-md:flex-none max-md:mr-3">
+                      <Icon className="flex-none" name={icon} />
+                    </div>
+
+                    <h3 className="text-white text-xl font-bold mb-2 group-hover:text-inherit transition-colors max-md:-mt-0.5">
+                      {title}
+                    </h3>
                   </div>
 
-                  <h3 className="text-white text-xl font-bold mb-2 group-hover:text-inherit transition-colors">
-                    {title}
-                  </h3>
-                  <p className=" text-[#D3D8DF] text-sm font-semibold group-hover:text-inherit transition-colors">
+                  <p className=" text-foreground-primary text-sm font-semibold group-hover:text-inherit transition-colors">
                     {description}
                   </p>
                 </section>

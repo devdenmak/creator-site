@@ -7,7 +7,6 @@ import { Benefits } from '@/app/_widgets/benefits'
 import { Features } from '@/app/_widgets/features'
 import { Pricing } from '@/app/_widgets/pricing'
 import { Clients } from '@/app/_widgets/clients'
-import { Review } from '@/app/_widgets/review'
 import { Faq } from '@/app/_widgets/faq'
 import { Onboarding } from '@/app/_widgets/onboarding'
 import { Subscribe } from '@/app/_widgets/subscribe'
@@ -56,10 +55,9 @@ export default function Home() {
       </Preview>
 
       <Clients />
-      <Review />
 
       <GetStarted
-        className="my-24"
+        className="my-24 max-2xl:my-12"
         variant="secondary"
         backgroundImage={getBackgroundImage(GetStartedSecondBg, 1328, 251)}
       />
@@ -69,7 +67,7 @@ export default function Home() {
       <Subscribe />
 
       <GetStarted
-        className="my-24"
+        className="my-24 max-lg:mt-12 max-md:mt-6 max-md:mb-0"
         variant="third"
         backgroundImage={getBackgroundImage(GetStartedThirdBg, 1328, 251)}
       />
