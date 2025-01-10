@@ -17,8 +17,9 @@
   --background-nineth: #415C0F;
   --background-tenth: #7C16FF;
   --background-eleventh: #0D0625;
+  --background-twelfth: #383B4A;
 
-  
+
   /* Foregrounds */
  
   --foreground-primary: #DEE7F1;
@@ -40,6 +41,7 @@
   --foreground-seventeenth: #374351;
   --foreground-eigteenth: #3B3B3B;
   --foreground-nineteenth: #606F82;
+  --foreground-twentieth: #434759;
   
 }
 

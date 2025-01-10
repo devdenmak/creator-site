@@ -36,7 +36,7 @@ const Subscribe = () => {
               </span>
             </Text>
 
-            <ContactForm className="max-w-[420px]" />
+            <ContactForm withConditions className="max-w-[420px]" />
           </div>
 
           <div ref={ref}>
