@@ -65,6 +65,7 @@ export default {
         'background-tenth': 'var(--background-tenth)',
         'background-eleventh': 'var(--background-eleventh)',
         'background-twelfth': 'var(--background-twelfth)',
+        'background-thirteenth': 'var(--background-thirteenth)',
 
         'foreground-primary': 'var(--foreground-primary)',
         'foreground-secondary': 'var(--foreground-secondary)',

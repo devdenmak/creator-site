@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <footer className="bg-background-third text-foreground-secondary pt-14 pb-20 max-lg:pb-18 max-md:pt-10 max-md:pb-10">
       <div className="container">
-        <div className="text-[#A1D50F] pb-7 -ml-11 -mr-11 max-2xl:mx-0 max-lg:pb-14 max-md:text-inherit max-md:pb-8">
+        <div className="text-background-thirteenth pb-7 -ml-11 -mr-11 max-2xl:mx-0 max-lg:pb-14 max-md:text-inherit max-md:pb-8">
           <FooterLogo />
         </div>
 

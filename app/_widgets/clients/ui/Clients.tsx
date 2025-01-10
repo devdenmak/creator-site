@@ -6,7 +6,7 @@ import ImageLorenzo from '../images/Lorenzo.jpg'
 const Clients = () => {
   return (
     <section id="customers" className="container">
-      <div className="flex items-end flex-wrap gap-x-20 gap-y-0 py-20 border-b border-b-[rgba(69,81,94,0.27)] max-lg:flex-col max-md:py-10">
+      <div className="flex items-end flex-wrap gap-x-20 gap-y-0 py-20 border-b border-b-white border-opacity-10 max-lg:flex-col max-md:py-10">
         <div className="w-[calc(30%-40px)] max-lg:w-full max-lg:mb-14">
           <h2 className="mt-0 mb-[10px] text-foreground-eight font-headings text-[80px] font-bold leading-[1.1] tracking-[2.4px] uppercase">
             260+
@@ -19,7 +19,11 @@ const Clients = () => {
         </div>
 
         <div className="min-w-0 w-[calc(70%-40px)] max-lg:w-full">
-          <Logos animation className="mb-[25px] max-2xl:grid max-2xl:grid-cols-6" />
+          <Logos
+            priority={false}
+            animation
+            className="mb-[25px] max-2xl:grid max-2xl:grid-cols-6"
+          />
 
           <Text variant="secondary">
             CreatorNimbus is trusted by industry-leading influencer management agencies. We are
