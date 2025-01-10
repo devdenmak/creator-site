@@ -14,7 +14,7 @@ const Pricing = () => {
         style={{
           background: `url(${BgLogo.src}) center / cover no-repeat, url(${BgSphere.src}) center -200px / 967px 967px no-repeat`,
         }}
-        className="pricing"
+        className="pricing max-md:!bg-none"
       >
         <div className="container">
           <div className="pricing__inner py-28 max-lg:pb-12 max-md:pt-14">

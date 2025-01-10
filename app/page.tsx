@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <Intro />
-      <Preview backgroundImage={getBackgroundImage(BgPreviewFirst, 1728, 1093, 100)}>
+      <Preview backgroundImage={getBackgroundImage(BgPreviewFirst, 1728, 1093, 95)}>
         <Title className="max-w-[520px]">Public, sharable agency link with verified data</Title>
 
         <Text className="max-w-[430px]" variant="main">
@@ -41,7 +41,7 @@ export default function Home() {
 
       <Preview
         variant="secondary"
-        backgroundImage={getBackgroundImage(BgPreviewSecond, 1728, 942, 100)}
+        backgroundImage={getBackgroundImage(BgPreviewSecond, 1728, 942, 95)}
       >
         <Title className="max-w-[520px]">A platform dedicated for streamlined operations</Title>
 

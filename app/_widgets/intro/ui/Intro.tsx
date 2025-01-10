@@ -8,7 +8,7 @@ import { Logos } from '@/app/_widgets/logos'
 const Intro = () => {
   return (
     <section
-      style={{ backgroundImage: getBackgroundImage(IntroBg, 1728, 890, 100) }}
+      style={{ backgroundImage: getBackgroundImage(IntroBg, 1728, 890, 95) }}
       className="bg-cover bg-center bg-no-repeat bg-background-tenth text-white overflow-hidden"
     >
       <div className="animate-fade animate-delay-300 container min-h-dvh flex flex-col items-center justify-center text-center py-36 max-lg:text-left max-lg:items-start max-md:pb-20">

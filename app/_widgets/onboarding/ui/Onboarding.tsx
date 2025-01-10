@@ -28,16 +28,20 @@ const Onboarding = () => {
             agency save time, build trust, and attract brands to fuel growth.
           </h3>
 
-          <Button
-            target="_blank"
-            href={GETTING_STARTED_LINK}
-            className={cn('w-[315px] opacity-0', {
+          <div
+            className={cn('opacity-0', {
               'animate-fade': inView,
             })}
-            variant="fifth"
           >
-            Get started now
-          </Button>
+            <Button
+              target="_blank"
+              href={GETTING_STARTED_LINK}
+              className={cn('w-[315px]')}
+              variant="fifth"
+            >
+              Get started now
+            </Button>
+          </div>
 
           <h4 className="font-headings text-[80px] font-bold leading-[1.1] tracking-[2.4px] uppercase mt-[65px]">
             260+
