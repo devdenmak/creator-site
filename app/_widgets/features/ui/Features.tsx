@@ -1,11 +1,20 @@
+'use client'
+
 import { Tagline } from '@/app/_shared/ui/Tagline'
 import { Text } from '@/app/_shared/ui/Text'
 import { Title } from '@/app/_shared/ui/Title'
 import { FEATURES_ADDITIONAL, FEATURES_MAIN } from '../config'
 import Image from 'next/image'
 import { Icon } from '@/app/_shared/ui/Icon'
+import { useInView } from 'react-intersection-observer'
+import { cn } from '@/app/_shared/lib/tailwindUtils'
 
 const Features = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  })
+
   return (
     <section
       id="features"
@@ -22,13 +31,16 @@ const Features = () => {
           <Text className="max-w-[564px] text-right max-2xl:max-w-[427px] max-lg:max-w-none max-lg:text-left">
             CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer
             management,{' '}
-            <span className="text-[#3B3B3B]">
+            <span className="text-foreground-eigteenth">
               giving you more time to focus on growing your business.
             </span>
           </Text>
         </div>
 
-        <section className="-m-2.5 pb-28 max-2xl:pb-20 max-lg:-m-5 max-lg:pb-16 max-md:-m-3 max-md:pb-12">
+        <section
+          ref={ref}
+          className="-m-2.5 pb-28 max-2xl:pb-20 max-lg:-m-5 max-lg:pb-16 max-md:-m-3 max-md:pb-12"
+        >
           {FEATURES_MAIN.map((group, index) => (
             <div className="flex flex-wrap even:flex-row-reverse max-lg:block" key={index}>
               {group.map(({ title, description, image }) => (
@@ -43,11 +55,22 @@ const Features = () => {
                       alt={title}
                     />
 
-                    <div className="absolute bottom-0 m-8 space-y-2 group-even:max-w-[316px] group-odd:max-w-[390px] max-2xl:m-7 max-lg:static max-lg:m-0 max-lg:space-y-1 max-lg:!max-w-none">
-                      <h3 className="text-1.5xl font-bold text-white max-lg:text-black max-lg:text-xl">
+                    <div
+                      className={cn(
+                        'absolute bottom-0 m-8 space-y-2 group-even:max-w-[316px] group-odd:max-w-[390px] max-2xl:m-7 max-lg:static max-lg:m-0 max-lg:space-y-1 max-lg:!max-w-none opacity-0 max-lg:opacity-100 max-lg:animate-none',
+                        {
+                          'animate-fade-up animate-duration-500': inView,
+                        },
+                      )}
+                    >
+                      <h3
+                        className={cn(
+                          'text-1.5xl font-bold text-white max-lg:text-black max-lg:text-xl',
+                        )}
+                      >
                         {title}
                       </h3>
-                      <p className="text-[#606F82] text-base font-semibold leading-5">
+                      <p className="text-foreground-nineteenth text-base font-semibold leading-5">
                         {description}
                       </p>
                     </div>
@@ -67,9 +90,9 @@ const Features = () => {
               </div>
 
               <p
-                className="text-[#374351] text-sm font-bold"
+                className="text-foreground-seventeenth text-sm font-bold"
                 dangerouslySetInnerHTML={{ __html: description }}
-              ></p>
+              />
             </li>
           ))}
         </ul>

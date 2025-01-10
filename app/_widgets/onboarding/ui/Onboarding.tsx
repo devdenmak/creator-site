@@ -1,3 +1,5 @@
+'use client'
+
 import { Icon } from '@/app/_shared/ui/Icon'
 import { FEATURES } from '../config'
 import BgOnboarding from '../images/bg-onboarding.jpg'
@@ -5,11 +7,18 @@ import { getBackgroundImage } from '@/app/_shared/lib/getBackgroundImage'
 import { Button } from '@/app/_shared/ui/Button'
 import { Text } from '@/app/_shared/ui/Text'
 import { GETTING_STARTED_LINK } from '@/app/_shared/config'
+import { useInView } from 'react-intersection-observer'
+import { cn } from '@/app/_shared/lib/tailwindUtils'
 
 const Onboarding = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  })
+
   return (
     <section>
-      <div className="container pt-20 pb-24 max-md:px-0 max-lg:pt-10 max-md:pb-20">
+      <div ref={ref} className="container pt-20 pb-24 max-md:px-0 max-lg:pt-10 max-md:pb-20">
         <section
           className="text-foreground-twelfth rounded-2xl overflow-hidden bg-no-repeat bg-cover px-[84px] pt-[110px] pb-[100px] max-xl:p-16 max-md:py-16 max-md:px-8 max-md:rounded-none"
           style={{ backgroundImage: getBackgroundImage(BgOnboarding, 1328, 600) }}
@@ -19,7 +28,14 @@ const Onboarding = () => {
             agency save time, build trust, and attract brands to fuel growth.
           </h3>
 
-          <Button target="_blank" href={GETTING_STARTED_LINK} className="w-[315px]" variant="fifth">
+          <Button
+            target="_blank"
+            href={GETTING_STARTED_LINK}
+            className={cn('w-[315px] opacity-0', {
+              'animate-fade': inView,
+            })}
+            variant="fifth"
+          >
             Get started now
           </Button>
 

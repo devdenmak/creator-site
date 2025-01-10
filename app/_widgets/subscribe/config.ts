@@ -1,5 +1,7 @@
 import { AnyIconName } from '@/app/_shared/icons'
 
+// There can only be 4 here. If you need to add more or fewer, adjust the layout accordingly.
+
 export const BENEFITS = [
   {
     icon: 'filled/cart' satisfies AnyIconName,

@@ -19,7 +19,7 @@ const Clients = () => {
         </div>
 
         <div className="min-w-0 w-[calc(70%-40px)] max-lg:w-full">
-          <Logos className="mb-[25px] max-2xl:grid max-2xl:grid-cols-6" />
+          <Logos animation className="mb-[25px] max-2xl:grid max-2xl:grid-cols-6" />
 
           <Text variant="secondary">
             CreatorNimbus is trusted by industry-leading influencer management agencies. We are

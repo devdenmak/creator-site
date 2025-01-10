@@ -81,6 +81,9 @@ export default {
         'foreground-fourteenth': 'var(--foreground-fourteenth)',
         'foreground-fifteenth': 'var(--foreground-fifteenth)',
         'foreground-sixteenth': 'var(--foreground-sixteenth)',
+        'foreground-seventeenth': 'var(--foreground-seventeenth)',
+        'foreground-eigteenth': 'var(--foreground-eigteenth)',
+        'foreground-nineteenth': 'var(--foreground-nineteenth)',
       },
 
       keyframes: {

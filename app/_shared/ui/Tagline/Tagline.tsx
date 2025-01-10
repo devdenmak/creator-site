@@ -6,7 +6,7 @@ import { cn } from '../../lib/tailwindUtils'
 import { taglineVariants } from './Tagline.variants'
 import { useInView } from 'react-intersection-observer'
 
-export type ITaglineTags = 'p'
+export type ITaglineTags = 'p' | 'span'
 
 interface ITaglineProps extends HTMLAttributes<HTMLElement>, taglineVariants {
   tag?: ITaglineTags
