@@ -40,6 +40,7 @@
 
     text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(15, 61, 70, 0.15);
+    scroll-behavior: smooth;
   } 
 
   body {
@@ -57,12 +58,6 @@
     visibility: hidden;
     pointer-events: none;
     display: none;
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      max-width: 100% !important;
-    }
   }
 }
 
@@ -96,6 +91,17 @@
   }
 }
 
-.custom-background {
+
+.background {
   background-size: contain, cover;
+}
+
+.button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100% !important;
+  }
 }

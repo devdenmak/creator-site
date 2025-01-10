@@ -8,6 +8,7 @@ export const AUTHOR = 'Ragebite'
 export const THEME_COLOR = '#120932'
 
 export const RAGEBITE_LINK = 'https://www.ragebite.com'
+export const GETTING_STARTED_LINK = 'https://www.ragebite.com'
 export const LOGO_LINK = '/'
 
 // Maximum of 5 points. If you need to add more, make sure the layout remains intact.
@@ -15,38 +16,43 @@ export const LOGO_LINK = '/'
 export const NAVIGATION = [
   {
     name: 'Features',
-    href: '/',
+    href: '#features',
+    external: false,
   },
   {
     name: 'Benefits',
-    href: '/',
+    href: '#benefits',
+    external: false,
   },
   {
     name: 'Customers',
-    href: '/',
+    href: '#customers',
+    external: false,
   },
   {
     name: 'Pricing',
-    href: '/',
+    href: '#pricing',
+    external: false,
   },
   {
     name: 'Blog',
-    href: '/',
+    href: 'https://www.ragebite.com',
+    external: true,
   },
 ] as const
 
 export const SOCIALS = [
   {
     name: 'Linkedin',
-    href: '/',
+    href: 'https://www.ragebite.com',
   },
   {
     name: 'X (Twitter)',
-    href: '/',
+    href: 'https://www.ragebite.com',
   },
   {
     name: 'Discord',
-    href: '/',
+    href: 'https://www.ragebite.com',
   },
 ] as const
 

@@ -4,6 +4,7 @@ import BgOnboarding from '../images/bg-onboarding.jpg'
 import { getBackgroundImage } from '@/app/_shared/lib/getBackgroundImage'
 import { Button } from '@/app/_shared/ui/Button'
 import { Text } from '@/app/_shared/ui/Text'
+import { GETTING_STARTED_LINK } from '@/app/_shared/config'
 
 const Onboarding = () => {
   return (
@@ -18,7 +19,7 @@ const Onboarding = () => {
             agency save time, build trust, and attract brands to fuel growth.
           </h3>
 
-          <Button className="w-[315px]" variant="fifth">
+          <Button target="_blank" href={GETTING_STARTED_LINK} className="w-[315px]" variant="fifth">
             Get started now
           </Button>
 

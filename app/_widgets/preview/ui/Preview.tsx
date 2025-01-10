@@ -19,7 +19,7 @@ const Preview = ({ variant = 'default', backgroundImage, children, className }: 
   return (
     <section
       style={{ backgroundImage: _backgroundImage }}
-      className={cn(previewVariants({ variant, className }), 'custom-background')}
+      className={cn(previewVariants({ variant, className }), 'background')}
     >
       <div className="container">
         <Tagline className="mb-7" variant="main">

@@ -29,9 +29,10 @@ const Footer = () => {
 
           <nav>
             <ol className="flex flex-wrap items-center gap-x-7 gap-y-1">
-              {NAVIGATION.map(({ name, href }) => (
+              {NAVIGATION.map(({ name, href, external }) => (
                 <li key={name}>
                   <Link
+                    target={external ? '_blank' : '_self'}
                     className="-m-2 p-2 tracking-[0.96px] transition-colors text-xs font-headings font-semibold text-inherit hover:text-black active:text-inherit uppercase inline-block"
                     href={href}
                   >
@@ -54,6 +55,7 @@ const Footer = () => {
               <Link
                 className="-m-2 p-2 text-base font-bold text-inherit transition-colors hover:text-black active:text-inherit inline-block"
                 href={href}
+                target="_blank"
               >
                 <span>{name}</span>
               </Link>
@@ -80,6 +82,7 @@ const Footer = () => {
                 <Link
                   className="-m-2 p-2 text-sm font-semibold transition-colors text-inherit hover:text-black active:text-inherit inline-block"
                   href={href}
+                  target="_blank"
                 >
                   <span>{name}</span>
                 </Link>

@@ -17,11 +17,23 @@ export interface IButtonProps extends buttonVariants {
   type?: 'submit' | 'button' | 'reset'
   className?: string
   children?: ReactNode
+  target?: '_blank' | '_self'
 }
 
 const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, IButtonProps>(
   (
-    { href, className, children, variant, size, loading, disabled, type = 'button', ...props },
+    {
+      href,
+      target = '_self',
+      className,
+      children,
+      variant,
+      size,
+      loading,
+      disabled,
+      type = 'button',
+      ...props
+    },
     ref,
   ) => {
     const innerEl = (
@@ -37,6 +49,7 @@ const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, IButtonProps>(
     if (href) {
       return (
         <Link
+          target={target}
           className={cn(buttonVariants({ variant, size, className }))}
           href={href}
           ref={ref as Ref<HTMLAnchorElement>}

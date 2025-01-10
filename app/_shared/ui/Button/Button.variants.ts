@@ -17,7 +17,7 @@ export const variants = {
 }
 
 export const buttonVariants = cva(
-  'inline-flex items-center justify-center relative min-w-0 cursor-pointer mx-5 transition focus-visible:outline-none disabled:pointer-events-none disabled:opacity-30 bg-current',
+  'button inline-flex items-center justify-center relative min-w-0 cursor-pointer mx-5 transition focus-visible:outline-none disabled:pointer-events-none disabled:opacity-30 bg-current',
   {
     variants: {
       variant: variants,

@@ -13,7 +13,7 @@ const Intro = () => {
       style={{ backgroundImage: getBackgroundImage(IntroBg, 1728, 890, 100) }}
       className="bg-cover bg-center bg-no-repeat bg-[#7C16FF] text-white"
     >
-      <div className="container min-h-dvh flex flex-col items-center justify-center text-center py-32">
+      <div className="container min-h-dvh flex flex-col items-center justify-center text-center py-36">
         <div className="max-w-[900px]">
           <Title size="l" tag="h1" className="mb-4">
             Transform the Way Your Influencer Management Agency Operates

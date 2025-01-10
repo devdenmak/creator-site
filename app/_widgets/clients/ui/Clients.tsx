@@ -6,7 +6,7 @@ import SecondLogosSet from '../images/second-set.svg'
 
 const Clients = () => {
   return (
-    <section className="clients">
+    <section id="customers" className="clients">
       <div className="container">
         <div className="clients__inner flex items-end flex-wrap gap-x-[80px] gap-y-0 pt-[80px] pb-[80px] border-b-[1px] border-b-[rgba(69,81,94,0.27)] max-xl:flex-col">
           <div className="clients__left w-[calc(30%-40px)] max-xl:w-full">

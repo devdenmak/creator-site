@@ -9,7 +9,7 @@ import { Icon } from '@/app/_shared/ui/Icon'
 
 const Pricing = () => {
   return (
-    <section className="bg-[#0D0625]">
+    <section id="pricing" className="bg-[#0D0625]">
       <div
         style={{
           background: `url(${BgLogo.src}) center / cover no-repeat, url(${BgSphere.src}) center -200px / 967px 967px no-repeat`,

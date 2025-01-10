@@ -3,6 +3,7 @@ import { Text } from '@/app/_shared/ui/Text'
 import { Button } from '@/app/_shared/ui/Button'
 import { cn } from '@/app/_shared/lib/tailwindUtils'
 import { getStartedVariants } from './GetStarted.variants'
+import { GETTING_STARTED_LINK } from '@/app/_shared/config'
 
 type IGetStarted = {
   className?: string
@@ -33,7 +34,12 @@ const GetStarted = ({ backgroundImage, variant = 'default', className }: IGetSta
           CreatorNimbus is designed to eliminate the guesswork and inefficiencies!
         </Text>
 
-        <Button variant={buttonVariants[variant]} className="max-md:w-full">
+        <Button
+          href={GETTING_STARTED_LINK}
+          target="_blank"
+          variant={buttonVariants[variant]}
+          className="max-md:w-full"
+        >
           Get started now
         </Button>
       </section>

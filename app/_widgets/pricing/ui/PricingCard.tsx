@@ -8,6 +8,7 @@ import { Button } from '@/app/_shared/ui/Button'
 import { formatPercentage, formatPrice } from '@/app/_shared/lib/formatPrice'
 import { cn } from '@/app/_shared/lib/tailwindUtils'
 import { Icon } from '@/app/_shared/ui/Icon'
+import { GETTING_STARTED_LINK } from '@/app/_shared/config'
 
 type IPricingCardProps = {
   theme?: 'main' | 'secondary'
@@ -92,7 +93,12 @@ export const PricingCard = ({
       </ul>
 
       <div className="pricing-card__control mt-auto">
-        <Button variant={theme === 'main' ? 'secondary' : 'third'} className="w-full">
+        <Button
+          href={GETTING_STARTED_LINK}
+          target="_blank"
+          variant={theme === 'main' ? 'secondary' : 'third'}
+          className="w-full"
+        >
           Start now
         </Button>
       </div>

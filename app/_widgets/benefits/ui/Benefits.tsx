@@ -7,7 +7,10 @@ import { Icon } from '@/app/_shared/ui/Icon'
 
 const Benefits = () => {
   return (
-    <section className="bg-background-secondary text-black pt-24 pb-48 max-lg:pt-16 max-lg:pb-20 max-md:pt-14 max-md:pb-0">
+    <section
+      id="benefits"
+      className="bg-background-secondary text-black pt-24 pb-48 max-lg:pt-16 max-lg:pb-20 max-md:pt-14 max-md:pb-0"
+    >
       <div className="container max-md:w-full max-md:px-0 max-md:max-w-full">
         <Tagline className="mb-7 max-md:px-8">Core advantages</Tagline>
         <Title className="max-w-[527px] mb-20 max-lg:mb-12 max-md:px-8">
