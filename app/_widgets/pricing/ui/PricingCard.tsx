@@ -38,32 +38,27 @@ export const PricingCard = ({
   )
 
   return (
-    <article
+    <section
       className={cn(
-        'pricing-card min-h-[640px] text-black rounded-2xl p-[30px] font-main flex flex-col min-w-0 max-lg:min-h-0 max-lg:p-[20px]',
-        `pricing-card--theme-${theme}`,
+        'min-h-[640px] text-black rounded-2xl p-7 font-main flex flex-col min-w-0 max-lg:min-h-0 max-lg:p-5',
         {
           'bg-background-secondary': theme === 'main',
           'bg-background-third': theme === 'secondary',
         },
       )}
     >
-      <h2 className="pricing-card__title text-[22px] font-bold leading-[1.2] mt-0 mb-[12px]">
-        {title}
-      </h2>
+      <h2 className="text-1.5xl font-bold leading-[1.2] mt-0 mb-3">{title}</h2>
 
-      <div className="pricing-card__offer flex flex-wrap gap-x-[10px] gap-y-[4px] mb-[30px]">
-        <div className="pricing-card__price empty:hidden text-[16px] font-bold leading-[1.2]">
-          {sum}
-        </div>
-        <div className="pricing-card__discount font-headings color-[#0B1117] text-[16px] font-bold leading-[1.2]">
+      <div className="flex flex-wrap gap-x-2.5 gap-y-1 mb-7">
+        <div className="empty:hidden text-base font-bold leading-[1.2]">{sum}</div>
+        <div className="font-headings text-foreground-fifteenth text-base font-bold leading-[1.2]">
           {discount}
         </div>
       </div>
 
-      <div className="pricing-card__control-box flex items-center flex-wrap gap-x-[10px] gap-y-[8px] border-b-[1px] border-b-[#1b2633] pb-[20px]">
+      <div className="pricing-card__control-box flex items-center flex-wrap gap-x-[10px] gap-y-[8px] border-b border-b-foreground-sixteenth pb-5">
         {priceMoreOne && (
-          <div className="pricing-card__switch text-[0] leading-[0] flex-[0_0_auto]">
+          <div className="pricing-card__switch text-[0] leading-[0] flex-none">
             <Switch
               checked={!!switchState}
               onCheckedChange={(val) => setSwitchState(val ? 1 : 0)}
@@ -72,19 +67,19 @@ export const PricingCard = ({
           </div>
         )}
 
-        <p className="pricing-card__description mt-[3px] mb-0 text-[16px] font-semibold leading-[1.27]">
+        <p className="pricing-card__description mt-[3px] mb-0 text-base font-semibold leading-[1.27]">
           {description}
         </p>
       </div>
 
-      <ul className="pricing-card__features-list py-[40px]">
+      <ul className="py-10">
         {features.map((feature) => (
           <li
-            className="pricing-card__features-item flex items-center  relative text-[14px] font-semibold leading-[1.27] mb-[20px] last:mb-0"
+            className="flex items-center relative text-sm font-semibold leading-[1.27] mb-5 last:mb-0"
             key={feature}
           >
             <Icon
-              className="text-[11px] flex-none mr-[10px] text-[#37414F]"
+              className="text-xs flex-none mr-2.5 text-foreground-fourteenth"
               name="outlined/check"
             />
             <span>{feature}</span>
@@ -92,7 +87,7 @@ export const PricingCard = ({
         ))}
       </ul>
 
-      <div className="pricing-card__control mt-auto">
+      <div className="mt-auto">
         <Button
           href={GETTING_STARTED_LINK}
           target="_blank"
@@ -102,6 +97,6 @@ export const PricingCard = ({
           Start now
         </Button>
       </div>
-    </article>
+    </section>
   )
 }

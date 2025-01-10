@@ -63,6 +63,7 @@ export default {
         'background-eight': 'var(--background-eight)',
         'background-nineth': 'var(--background-nineth)',
         'background-tenth': 'var(--background-tenth)',
+        'background-eleventh': 'var(--background-eleventh)',
 
         'foreground-primary': 'var(--foreground-primary)',
         'foreground-secondary': 'var(--foreground-secondary)',
@@ -76,6 +77,10 @@ export default {
         'foreground-tenth': 'var(--foreground-tenth)',
         'foreground-eleventh': 'var(--foreground-eleventh)',
         'foreground-twelfth': 'var(--foreground-twelfth)',
+        'foreground-thirteenth': 'var(--foreground-thirteenth)',
+        'foreground-fourteenth': 'var(--foreground-fourteenth)',
+        'foreground-fifteenth': 'var(--foreground-fifteenth)',
+        'foreground-sixteenth': 'var(--foreground-sixteenth)',
       },
 
       keyframes: {
