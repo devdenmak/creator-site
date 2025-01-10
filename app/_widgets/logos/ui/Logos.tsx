@@ -6,10 +6,16 @@ import LogoNogooo from '../images/nogooo.svg'
 import LogoDisput from '../images/disput.svg'
 import LogoKaizen from '../images/kaizen.svg'
 import LogoAmg from '../images/amg.svg'
+import { cn } from '@/app/_shared/lib/tailwindUtils'
 
-const Logos = ({ priority = true }: { priority?: boolean }) => {
+const Logos = ({ priority = true, className }: { priority?: boolean; className?: string }) => {
   return (
-    <div className="flex flex-wrap gap-6 gap-y-9 items-center max-lg:grid max-lg:grid-cols-6 max-md:grid-cols-3">
+    <div
+      className={cn(
+        'flex flex-wrap gap-6 gap-y-9 items-center max-lg:grid max-lg:grid-cols-6 max-md:grid-cols-3',
+        className,
+      )}
+    >
       <Image src={LogoApollo} priority={priority} alt="Logo Apollo" />
       <Image src={LogoNewgen} priority={priority} alt="Logo Newgen" />
       <Image src={LogoNogooo} priority={priority} alt="Logo Nogooo" />

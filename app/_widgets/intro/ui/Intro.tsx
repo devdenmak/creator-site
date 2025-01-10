@@ -27,7 +27,7 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="border-t w-full max-w-full border-t-white border-opacity-25 mt-16 pt-16 justify-center flex max-md:mt-12 max-md:pt-12">
+        <div className="border-t w-full max-w-full border-t-white border-opacity-25 mt-16 pt-16 justify-center flex max-md:mt-12 max-md:pt-12 max-md:justify-start">
           <Logos />
         </div>
 
