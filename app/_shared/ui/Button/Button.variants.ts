@@ -6,12 +6,14 @@ export const sizes = {
 
 export const variants = {
   default: 'text-background-secondary hover:text-background-third active:text-background-secondary',
-  secondary: 'group text-background-sixth hover:text-background-third active:text-background-sixth',
+  primary: 'text-background-third hover:text-background-secondary active:text-background-third',
+  secondary:
+    'text-background-sixth hover:text-background-third active:text-background-sixth [&>span]:text-white [&>span]:hover:text-black [&>span]:active:text-white',
   third:
-    'group text-background-secondary hover:text-background-sixth active:text-background-secondary',
-  fourth: 'group text-background-third hover:text-background-sixth active:text-background-third',
-  fifth: 'group text-background-third hover:text-background-secondary active:text-background-third',
-  sixth: 'group text-background-nineth hover:opacity-90 active:opacity-100',
+    'text-background-secondary hover:text-background-sixth active:text-background-secondary [&>span]:hover:text-white [&>span]:active:text-black',
+  fourth:
+    'text-background-third hover:text-background-sixth active:text-background-third [&>span]:hover:text-white [&>span]:active:text-black',
+  fifth: 'text-background-nineth hover:opacity-90 active:opacity-100',
 }
 
 export const buttonVariants = cva(

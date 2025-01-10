@@ -10,6 +10,8 @@ export const THEME_COLOR = '#120932'
 export const RAGEBITE_LINK = 'https://www.ragebite.com'
 export const LOGO_LINK = '/'
 
+// Maximum of 5 points. If you need to add more, make sure the layout remains intact.
+
 export const NAVIGATION = [
   {
     name: 'Features',

@@ -1,4 +1,4 @@
-import Image, { getImageProps } from 'next/image'
+import Image from 'next/image'
 import IntroBg from '../images/bg-intro.jpg'
 import { getBackgroundImage } from '@/app/_shared/lib/getBackgroundImage'
 import { Title } from '@/app/_shared/ui/Title'
@@ -8,13 +8,9 @@ import SecondLogosSet from '@/app/_widgets/clients/images/second-set.svg'
 import TrustedLogo from '../images/trusted.svg'
 
 const Intro = () => {
-  const {
-    props: { srcSet: introBgSrc },
-  } = getImageProps({ alt: '', width: 1728, height: 890, src: IntroBg, quality: 100 })
-
   return (
     <section
-      style={{ backgroundImage: getBackgroundImage(introBgSrc) }}
+      style={{ backgroundImage: getBackgroundImage(IntroBg, 1728, 890, 100) }}
       className="bg-cover bg-center bg-no-repeat bg-[#7C16FF] text-white"
     >
       <div className="container min-h-dvh flex flex-col items-center justify-center text-center py-32">

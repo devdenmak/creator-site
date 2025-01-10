@@ -1,59 +1,59 @@
 'use client'
 
-import { ButtonHTMLAttributes, forwardRef } from 'react'
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, forwardRef, ReactNode, Ref } from 'react'
 
-import { cn } from '../../lib/tailwindUtils'
 import { buttonVariants } from './Button.variants'
 import { ButtonCorner } from './ButtonCorner'
 import Link from 'next/link'
+import { cn } from '@/app/_shared/lib/tailwindUtils'
 
-export interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, buttonVariants {
+type ButtonElementProps = ButtonHTMLAttributes<HTMLButtonElement>
+type AnchorElementProps = AnchorHTMLAttributes<HTMLAnchorElement>
+
+export interface IButtonProps extends buttonVariants {
+  href?: string
   loading?: boolean
   disabled?: boolean
   type?: 'submit' | 'button' | 'reset'
-  href?: string
+  className?: string
+  children?: ReactNode
 }
 
-const Button = forwardRef<HTMLButtonElement, IButtonProps>(
+const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, IButtonProps>(
   (
-    { className, children, variant, size, disabled, loading, type = 'button', href, ...props },
+    { href, className, children, variant, size, loading, disabled, type = 'button', ...props },
     ref,
   ) => {
-    const common = {
-      className: cn(buttonVariants({ variant, size, className })),
-    }
-
     const innerEl = (
       <>
-        <ButtonCorner className="h-full absolute top-0 bottom-0 left-0 -ml-5 fill-current" />
-        <span
-          className={cn(
-            'font-headings truncate uppercase text-xs font-bold text-black tracking-[0.96px] transition-colors',
-            {
-              'group-[.text-background-sixth]:text-white group-hover:!text-black group-active:!text-white':
-                variant === 'secondary',
-              'group-hover:!text-white group-active:!text-black':
-                variant === 'third' || variant === 'fourth',
-              'group-[.text-background-nineth]:text-foreground-eight': variant === 'sixth',
-            },
-          )}
-        >
+        <ButtonCorner className="left-0 -ml-5" />
+        <span className="font-headings truncate uppercase text-xs font-bold text-black tracking-[0.96px] transition-colors">
           {children}
         </span>
-        <ButtonCorner className="h-full absolute top-0 bottom-0 right-0 -mr-5 scale-flip fill-current" />
+        <ButtonCorner className="right-0 -mr-5 scale-x-[-1] scale-y-[-1]" />
       </>
     )
 
     if (href) {
       return (
-        <Link {...common} href={href}>
+        <Link
+          className={cn(buttonVariants({ variant, size, className }))}
+          href={href}
+          ref={ref as Ref<HTMLAnchorElement>}
+          {...(props as AnchorElementProps)}
+        >
           {innerEl}
         </Link>
       )
     }
 
     return (
-      <button {...common} type={type} disabled={loading || disabled} ref={ref} {...props}>
+      <button
+        className={cn(buttonVariants({ variant, size, className }))}
+        type={type}
+        disabled={loading || disabled}
+        {...(props as ButtonElementProps)}
+      >
         {innerEl}
       </button>
     )

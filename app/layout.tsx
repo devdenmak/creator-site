@@ -51,9 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${ProximaNova.variable} ${ChakraPetch.variable} min-h-screen flex flex-col`}
-      >
+      <body className={`${ProximaNova.variable} ${ChakraPetch.variable} min-h-dvh flex flex-col`}>
         <Header />
 
         <main className="flex-grow">{children}</main>

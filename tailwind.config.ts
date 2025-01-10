@@ -38,8 +38,8 @@ export default {
       container: {
         center: true,
         padding: {
-          DEFAULT: '35px',
-          sm: '35px',
+          DEFAULT: '36px',
+          sm: '36px',
           md: '50px',
           lg: '50px',
           xl: '180px',
@@ -60,7 +60,7 @@ export default {
         'background-sixth': 'var(--background-sixth)',
         'background-seventh': 'var(--background-seventh)',
         'background-eight': 'var(--background-eight)',
-        'background-ninenth': 'var(--background-ninenth)',
+        'background-nineth': 'var(--background-nineth)',
 
         'foreground-primary': 'var(--foreground-primary)',
         'foreground-secondary': 'var(--foreground-secondary)',
@@ -93,17 +93,4 @@ export default {
       },
     },
   },
-  plugins: [
-    function ({
-      addUtilities,
-    }: {
-      addUtilities: (utilities: Record<string, Record<string, string>>) => void
-    }) {
-      addUtilities({
-        '.scale-flip': {
-          transform: 'scale(-1, -1)',
-        },
-      })
-    },
-  ],
 } satisfies Config

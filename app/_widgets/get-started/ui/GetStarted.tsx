@@ -16,7 +16,7 @@ const GetStarted = ({ backgroundImage, variant = 'default', className }: IGetSta
   const buttonVariants = {
     default: 'default',
     secondary: 'fourth',
-    third: 'fifth',
+    third: 'primary',
   } as const
 
   return (

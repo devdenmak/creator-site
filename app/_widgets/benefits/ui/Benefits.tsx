@@ -2,15 +2,10 @@ import { Tagline } from '@/app/_shared/ui/Tagline'
 import { Title } from '@/app/_shared/ui/Title'
 import { GetStarted, GetStartedFirstBg } from '../../get-started'
 import { getBackgroundImage } from '@/app/_shared/lib/getBackgroundImage'
-import { getImageProps } from 'next/image'
 import { BENEFITS } from '../config'
 import { Icon } from '@/app/_shared/ui/Icon'
 
 const Benefits = () => {
-  const {
-    props: { srcSet },
-  } = getImageProps({ alt: '', width: 1328, height: 251, src: GetStartedFirstBg })
-
   return (
     <section className="bg-background-secondary text-black pt-24 pb-48 max-lg:pt-16 max-lg:pb-20 max-md:pt-14 max-md:pb-0">
       <div className="container max-md:w-full max-md:px-0 max-md:max-w-full">
@@ -50,7 +45,7 @@ const Benefits = () => {
         </div>
       </div>
 
-      <GetStarted backgroundImage={getBackgroundImage(srcSet)} />
+      <GetStarted backgroundImage={getBackgroundImage(GetStartedFirstBg, 1328, 251)} />
     </section>
   )
 }

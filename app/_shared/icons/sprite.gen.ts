@@ -100,7 +100,7 @@ export const SPRITES_META: {
     },
   },
   logos: {
-    filePath: 'logos.5b594827.svg',
+    filePath: 'logos.aed875b5.svg',
     items: {
       amg: {
         viewBox: '0 0 75 23',

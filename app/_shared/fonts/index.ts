@@ -6,11 +6,12 @@ export const ChakraPetch = Chakra_Petch({
   weight: ['600', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
-  display: 'swap',
+  display: 'block',
 })
 
 export const ProximaNova = localFont({
   variable: '--font-proxima-nova',
+  display: 'block',
   src: [
     {
       path: '../../_shared/fonts/ProximaNova/ProximaNova-Semibold.woff2',

@@ -20,7 +20,7 @@
   /* Foregrounds */
  
   --foreground-primary: #DEE7F1;
-  --foreground-secondary: #0F3D46;
+  --foreground-secondary: #0F3D46; 
   --foreground-third: #16FFFF;
   --foreground-fourth: #B4C1D0;
   --foreground-fifth: #B0A7CF;
@@ -98,8 +98,4 @@
 
 .custom-background {
   background-size: contain, cover;
-}
-
-.apollo-hotfix {
-  fill: #401079 !important;
 }
