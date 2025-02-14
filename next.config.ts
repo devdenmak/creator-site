@@ -2,6 +2,10 @@ import type { NextConfig } from 'next'
 import svg from '@neodx/svg/webpack'
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
+  env: {
+    NEXT_PUBLIC_COOLIFY_URL: process.env.COOLIFY_URL || '',
+  },
   webpack: (config, options) => {
     const { isServer } = options
 
