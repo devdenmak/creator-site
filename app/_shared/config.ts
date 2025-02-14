@@ -1,4 +1,5 @@
 export const FRONTEND_URL = process.env.NEXT_PUBLIC_COOLIFY_URL || 'http://localhost:3000'
+export const DISALLOW_ROBOTS = process.env.NEXT_PUBLIC_DISALLOW_ROBOTS === 'true'
 
 export const DEFAULT_TITLE = 'Creator Byte'
 export const DEFAULT_DESCRIPTION = 'Creator Byte'
