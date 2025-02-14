@@ -41,6 +41,7 @@ RUN \
 FROM base AS runner
 WORKDIR /app
 
+RUN corepack enable pnpm && pnpm add @libsql/linux-x64-musl
 RUN apk add --no-cache curl wget
 
 ENV NODE_ENV production
