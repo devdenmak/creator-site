@@ -6,6 +6,7 @@ import { Checkbox } from '@/app/_shared/ui/Checkbox'
 import { Input } from '@/app/_shared/ui/Input'
 import { useState } from 'react'
 import Link from 'next/link'
+import { GETTING_STARTED_LINK } from '@/app/_shared/config'
 
 const ContactForm = ({
   className,
@@ -28,11 +29,20 @@ const ContactForm = ({
           onChange={(e) => setInputState(e.target.value)}
         />
 
-        <Button className="flex-none max-md:hidden" cornerLeftType="strict" type="submit">
+        <Button
+          target="_blank"
+          href={GETTING_STARTED_LINK}
+          className="flex-none max-md:hidden"
+          cornerLeftType="strict"
+        >
           {buttonText}
         </Button>
 
-        <Button className="flex-none w-full hidden max-md:inline-flex" type="submit">
+        <Button
+          target="_blank"
+          href={GETTING_STARTED_LINK}
+          className="flex-none w-full hidden max-md:inline-flex"
+        >
           {buttonText}
         </Button>
       </div>

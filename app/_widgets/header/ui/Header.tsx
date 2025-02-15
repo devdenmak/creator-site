@@ -38,9 +38,9 @@ const Header = () => {
           Explore agencies
         </Button>
 
-        <Button className="hidden max-lg:inline-flex" variant="primary">
+        {/* <Button className="hidden max-lg:inline-flex" variant="primary">
           Menu
-        </Button>
+        </Button> */}
       </div>
     </header>
   )

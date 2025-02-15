@@ -29,7 +29,7 @@ const Subscribe = () => {
             </Title>
 
             <Text variant="secondary" className="max-w-[429px] mb-8">
-              CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer
+              CreatorSite is designed to eliminate the guesswork and inefficiencies of influencer
               management,{' '}
               <span className="text-foreground-seventh">
                 giving you more time to focus on growing your business.

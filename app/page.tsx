@@ -27,7 +27,7 @@ export default function Home() {
         <Title className="max-w-[520px]">Public, sharable agency link with verified data</Title>
 
         <Text className="max-w-[430px]" variant="main">
-          CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer
+          CreatorSite is designed to eliminate the guesswork and inefficiencies of influencer
           management,{' '}
           <span className="text-foreground-primary">
             giving you more time to focus on growing your business.
@@ -46,7 +46,7 @@ export default function Home() {
         <Title className="max-w-[520px]">A platform dedicated for streamlined operations</Title>
 
         <Text className="max-w-[530px]" variant="secondary">
-          CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer
+          CreatorSite is designed to eliminate the guesswork and inefficiencies of influencer
           management,{' '}
           <span className="text-foreground-seventh">
             giving you more time to focus on growing your business.

@@ -18,7 +18,7 @@ const Intro = () => {
           </Title>
 
           <Text className="max-w-xl mx-auto mb-11 max-lg:mx-0 max-md:mb-8">
-            CreatorNimbus empowers influencer agencies with cutting-edge technology, streamlining
+            CreatorSite empowers influencer agencies with cutting-edge technology, streamlining
             operations and enabling secure, seamless collaboration with brands.
           </Text>
 

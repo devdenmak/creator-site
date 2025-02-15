@@ -29,7 +29,7 @@ const Features = () => {
           </Title>
 
           <Text className="max-w-[564px] text-right max-2xl:max-w-[427px] max-lg:max-w-none max-lg:text-left">
-            CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer
+            CreatorSite is designed to eliminate the guesswork and inefficiencies of influencer
             management,{' '}
             <span className="text-foreground-eigteenth">
               giving you more time to focus on growing your business.

@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
 
         <Text className="max-w-[535px] mb-7">
-          CreatorNimbus is designed to eliminate the guesswork and inefficiencies of influencer
+          CreatorSite is designed to eliminate the guesswork and inefficiencies of influencer
           management, giving you more time to focus on growing your business.
         </Text>
 
@@ -65,14 +65,14 @@ const Footer = () => {
 
         <div className="flex flex-wrap items-end gap-x-8 gap-y-7 justify-between border-t border-foreground-secondary pt-4 mt-32 max-lg:items-start max-md:mt-12">
           <p className="text-sm font-semibold max-lg:max-w-[300px]">
-            © <time dateTime={currentYear}>{currentYear}</time> - CreatorNimbus™ All rights
+            © <time dateTime={currentYear}>{currentYear}</time> - CreatorSite™ All rights
             reserved. Platform developed by{' '}
             <a
               target="_blank"
               href={RAGEBITE_LINK}
               className="transition-colors hover:text-black active:text-inherit font-extrabold p-1 -m-1 uppercase inline-block"
             >
-              Ragebite
+              Maxsimov.pro
             </a>
           </p>
 

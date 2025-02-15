@@ -13,7 +13,7 @@ const Clients = () => {
           </h2>
 
           <Text className="max-lg:max-w-96" variant="secondary">
-            Agencies already use CreatorNimbus to transform the way they work and grow within the
+            Agencies already use CreatorSite to transform the way they work and grow within the
             industry.
           </Text>
         </div>
@@ -26,8 +26,8 @@ const Clients = () => {
           />
 
           <Text variant="secondary">
-            CreatorNimbus is trusted by industry-leading influencer management agencies. We are
-            proud to be a powerhouse driving the marketing of tomorrow, providing tools that empower
+            CreatorSite is trusted by industry-leading influencer management agencies. We are proud
+            to be a powerhouse driving the marketing of tomorrow, providing tools that empower
             seamless collaboration and innovation.
           </Text>
         </div>
@@ -39,9 +39,9 @@ const Clients = () => {
             “
           </span>
           <span>
-            <em className="text-foreground-primary">CreatorNimbus</em> has streamlined our
-            operations enormously and saved us tons of time on manual data entry. Working with
-            brands has never been easier than it is now.
+            <em className="text-foreground-primary">CreatorSite</em> has streamlined our operations
+            enormously and saved us tons of time on manual data entry. Working with brands has never
+            been easier than it is now.
           </span>
         </blockquote>
 

@@ -24,7 +24,7 @@ const Onboarding = () => {
           style={{ backgroundImage: getBackgroundImage(BgOnboarding, 1328, 600) }}
         >
           <h3 className="font-main text-4xl font-black mb-[40px] max-w-[1100px] max-md:text-3xl">
-            CreatorNimbus streamlines operations with verified data and automation, helping your
+            CreatorSite streamlines operations with verified data and automation, helping your
             agency save time, build trust, and attract brands to fuel growth.
           </h3>
 
@@ -48,7 +48,7 @@ const Onboarding = () => {
           </h4>
 
           <Text className="max-w-[380px]">
-            Agencies already use CreatorNimbus to transform the way they work and grow within the
+            Agencies already use CreatorSite to transform the way they work and grow within the
             industry.
           </Text>
         </section>

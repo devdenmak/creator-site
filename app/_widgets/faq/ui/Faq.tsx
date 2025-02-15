@@ -18,7 +18,7 @@ const Faq = () => {
         </Tagline>
 
         <div className="grid grid-cols-2 gap-20 max-lg:grid-cols-1 max-md:gap-14">
-          <Title>Frequently asked questions about creatornimbus</Title>
+          <Title>Frequently asked questions about CreatorSite</Title>
 
           <Accordion
             defaultValue={faqData[0].question}

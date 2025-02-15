@@ -31,7 +31,7 @@ const GetStarted = ({ backgroundImage, variant = 'default', className }: IGetSta
         </Title>
 
         <Text className="mb-7">
-          CreatorNimbus is designed to eliminate the guesswork and inefficiencies!
+          CreatorSite is designed to eliminate the guesswork and inefficiencies!
         </Text>
 
         <Button

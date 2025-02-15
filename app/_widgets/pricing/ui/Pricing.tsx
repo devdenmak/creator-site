@@ -21,8 +21,8 @@ const Pricing = () => {
             <div className="pricing__header max-w-[530px] flex flex-col gap-y-2 ml-auto mr-auto text-center mb-16 max-lg:mx-0 max-lg:text-left max-md:mb-12">
               <Title>Pricing</Title>
               <Text className="text-foreground-thirteenth">
-                Use <em>CreatorNimbus</em> for free with your whole team. Upgrade to enable
-                unlimited data gathering, enhanced public agency profile, and additional features.
+                Use <em>CreatorSite</em> for free with your whole team. Upgrade to enable unlimited
+                data gathering, enhanced public agency profile, and additional features.
               </Text>
             </div>
 
