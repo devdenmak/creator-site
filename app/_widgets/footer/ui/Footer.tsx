@@ -6,7 +6,7 @@ import {
   CONVERSATIONS,
   LOGO_LINK,
   NAVIGATION,
-  RAGEBITE_LINK,
+  SHARED_LINK,
   SOCIALS,
 } from '@/app/_shared/config'
 import Link from 'next/link'
@@ -69,7 +69,7 @@ const Footer = () => {
             reserved. Platform developed by{' '}
             <a
               target="_blank"
-              href={RAGEBITE_LINK}
+              href={SHARED_LINK}
               className="transition-colors hover:text-black active:text-inherit font-extrabold p-1 -m-1 uppercase inline-block"
             >
               Maxsimov.pro

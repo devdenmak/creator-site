@@ -1,7 +1,7 @@
 {
-  "name": "creator-byte",
+  "name": "creator-site",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "dev:turbo": "next dev --turbo",

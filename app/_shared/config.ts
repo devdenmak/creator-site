@@ -8,7 +8,7 @@ export const COMPANY_NAME = 'Creator Site'
 export const AUTHOR = 'Maxsimov.pro'
 export const THEME_COLOR = '#120932'
 
-export const RAGEBITE_LINK = 'https://www.upwork.com/fl/~017147e0aa8f7d09bc?mp_source=share'
+export const SHARED_LINK = 'https://www.upwork.com/fl/~017147e0aa8f7d09bc?mp_source=share'
 export const GETTING_STARTED_LINK = 'https://www.upwork.com/fl/~017147e0aa8f7d09bc?mp_source=share'
 export const LOGO_LINK = '/'
 
